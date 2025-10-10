@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+html {
+  transition: color 0.35s, background-color 0.35s;
+}
+
+html * {
+  transition: color 0.35s, background-color 0.35s, border-color 0.35s, opacity 0.35s, transform 0.35s;
+}
+
+body {
+  font-size: 1.05rem;
+  font-weight: 450;
+}
