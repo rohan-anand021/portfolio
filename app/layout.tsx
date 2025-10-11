@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Rohan Anand - Data Engineer",
   description: "Data Engineer based in Charlotte.",
+  icons: {
+    icon: "/working-on-a-pc-svgrepo-com.ico",
+  },
 };
 
 export default function RootLayout({
