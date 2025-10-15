@@ -36,6 +36,22 @@ export default function Home() {
       demo: "/pdfs/faircase-poster.pdf",
     },
     {
+      title: "Hotel Sentiment Analysis",
+      description:
+        "Classification of hotel reviews as positive vs. negative across three NN architectures: LSTM, Stacked LSTM, and Mini BERT",
+      tech: [
+        "Python",
+        "Tensorflow",
+        "Transformers",
+        "HuggingFace",
+        "FastAPI",
+        "Pandas",
+      ],
+      github:
+        "https://github.com/rohan-anand21/Hotel-Sentiment-Analysis",
+      demo: "https://huggingface.co/spaces/rohan0212/hotel-sentiment-analysis",
+    },
+    {
       title: "Maternal Health & Infant Outcomes Analysis",
       description:
         "A statistical exploration of how maternal lifestyle (esp. smoking) correlates with infant outcomes (birth weight, APGAR), with additional factors such as BMI.",
