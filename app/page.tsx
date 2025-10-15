@@ -220,6 +220,7 @@ export default function Home() {
         "OpenAI API",
         "petgraph",
         "dbt",
+        "Tensorflow"
       ]),
     },
     {
