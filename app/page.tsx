@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { AnimatedWrapper } from "./components/AnimatedWrapper";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<
@@ -109,8 +108,13 @@ export default function Home() {
       companyUrl: "https://dataeconomy.ai",
       location: "Charlotte, NC",
       period: "March 2025 - Present",
-      description:
-        "I developed and deployed an implicit-feedback ALS recommender that improved top-10 precision by ~50% versus a baseline. I deployed this model on AWS ECS as a Dockerized FastAPI service and fully automated its retraining and deployment with a Jenkins CI/CD pipeline. I also engineered a near-real-time data ingestion system with Kafka and Snowflake , rewrote a data validation package with PySpark and Great Expectations to cut runtime by ~70% , and implemented complete historical data management using SQL, dbt, and Iceberg tables",
+      description: [
+        "Developed and deployed an implicit-feedback ALS recommender that improved top-10 precision by ~50% versus a baseline",
+        "Deployed the model on AWS ECS as a Dockerized FastAPI service and fully automated retraining and deployment with a Jenkins CI/CD pipeline",
+        "Engineered a near-real-time data ingestion system with Kafka and Snowflake",
+        "Rewrote a data validation package with PySpark and Great Expectations to cut runtime by ~70%",
+        "Implemented complete historical data management using SQL, dbt, and Iceberg tables",
+      ],
       tech: [
         "Python",
         "SQL",
@@ -140,8 +144,13 @@ export default function Home() {
       companyUrl: "https://www.bu.edu/spark/",
       location: "Boston, MA",
       period: "September 2024 - January 2025",
-      description:
-        "I built an end-to-end system that reduced client investigation time by ~80%. This involved creating data pipelines to ingest, clean, and deduplicate officer records and implementing an embeddings pipeline with OpenAI and a Chroma vector index. The solution was delivered as a FastAPI service, orchestrated with LangChain, which improved offline recall by ~40% through feature augmentation and targeted prompt templates.",
+      description: [
+        "Built an end-to-end system that reduced client investigation time by ~80%",
+        "Created data pipelines to ingest, clean, and deduplicate officer records",
+        "Implemented an embeddings pipeline with OpenAI and a Chroma vector index",
+        "Delivered the solution as a FastAPI service, orchestrated with LangChain",
+        "Improved offline recall by ~40% through feature augmentation and targeted prompt templates",
+      ],
       tech: ["Python", "Excel", "OpenAI API", "Chroma", "FastAPI"],
       libraries: ["Pandas", "NumPy", "Seaborn", "Matplotlib"],
     },
@@ -151,8 +160,11 @@ export default function Home() {
       companyUrl: "https://www.axistechnologyllc.com",
       location: "Boston, MA",
       period: "May 2024 - Aug 2024",
-      description:
-        "I built a scalable synthetic-data generator in Python that substantially improved offline PII detection performance on a held-out real dataset. I also wrote a parser to read JSON database schemas and automatically tag column semantic types and authored tests to evaluate and document OpenSearch query relevance for a table-similarity search feature.",
+      description: [
+        "Built a scalable synthetic-data generator in Python that substantially improved offline PII detection performance on a held-out real dataset",
+        "Wrote a parser to read JSON database schemas and automatically tag column semantic types",
+        "Authored tests to evaluate and document OpenSearch query relevance for a table-similarity search feature",
+      ],
       tech: ["Python", "SQL"],
       libraries: ["Faker", "MySQL"],
     },
@@ -162,8 +174,12 @@ export default function Home() {
       companyUrl: "https://www.asureagency.com",
       location: "Manchester, NH",
       period: "June 2022 - Aug 2022",
-      description:
-        "I consolidated customer and policy data from 2,500+ documents with Pandas and wrote Snowflake SQL to segment customers. I then built 10-15 Power BI and Tableau dashboards for renewal targeting, which helped streamline the outreach process and contributed to a 95% client retention rate over the period.",
+      description: [
+        "Consolidated customer and policy data from 2,500+ documents with Pandas",
+        "Wrote Snowflake SQL to segment customers",
+        "Built 10-15 Power BI and Tableau dashboards for renewal targeting",
+        "Helped streamline the outreach process and contributed to a 95% client retention rate",
+      ],
       tech: ["Python", "SQL", "Excel", "Snowflake", "Tableau"],
       libraries: ["Pandas"],
     },
@@ -312,31 +328,27 @@ export default function Home() {
       <div>
         {/* Hero Section */}
         <section className="mb-6">
-          <AnimatedWrapper delay={0.2}>
-            <h1 className="text-xl font-medium tracking-tight mb-4 flex items-baseline justify-between">
-              <span>
-                Hey, I&apos;m{" "}
-                <span className="text-zinc-900 dark:text-zinc-100">Rohan</span>
-              </span>
-            </h1>
-          </AnimatedWrapper>
-          <AnimatedWrapper delay={0.4}>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400 max-w-xl mb-8">
-              Data Engineer in Charlotte &mdash; Analyzing data and building the
-              systems to do so. Currently @{" "}
-              <a
-                href="https://dataeconomy.ai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
-              >
-                Dataeconomy
-              </a>
-              . Contact me below.
-            </p>
-          </AnimatedWrapper>
+          <h1 className="text-xl font-medium tracking-tight mb-4 flex items-baseline justify-between">
+            <span>
+              Hey, I&apos;m{" "}
+              <span className="text-zinc-900 dark:text-zinc-100">Rohan</span>
+            </span>
+          </h1>
+          <p className="text-sm text-zinc-600 dark:text-zinc-400 max-w-xl mb-8">
+            Data Engineer in Charlotte &mdash; Analyzing data and building the
+            systems to do so. Currently @{" "}
+            <a
+              href="https://dataeconomy.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
+            >
+              Dataeconomy
+            </a>
+            . Contact me below.
+          </p>
 
-          <AnimatedWrapper delay={0.6}>
+          <div>
             {/* Social Links */}
             <div className="flex w-full items-center justify-between gap-5">
               <div className="flex flex-row gap-3">
@@ -423,10 +435,9 @@ export default function Home() {
             >
               {copyMessage}
             </div>
-          </AnimatedWrapper>
+          </div>
 
-          <AnimatedWrapper delay={0.8}>
-            {/* Navigation Tabs */}
+          {/* Navigation Tabs */}
             <div className="inline-flex h-9 w-fit items-center justify-center rounded-lg mb-4 border-none bg-transparent p-0 -ml-[8px] mt-8">
               <button
                 onClick={() => setActiveTab("projects")}
@@ -469,7 +480,6 @@ export default function Home() {
                 Blog
               </button>
             </div>
-          </AnimatedWrapper>
         </section>
 
         {/* Projects Section */}
@@ -478,12 +488,7 @@ export default function Home() {
             <div className="space-y-8">
               <ul className="space-y-8">
                 {projects.map((project, index) => (
-                  <AnimatedWrapper
-                    key={index}
-                    delay={(index + 1) * 0.1}
-                    direction="x"
-                  >
-                    <li>
+                  <li key={index}>
                       <div className="flex items-baseline justify-between mb-1">
                         <h3 className="text-md font-medium">{project.title}</h3>
                         <div className="flex flex-row gap-2">
@@ -558,7 +563,6 @@ export default function Home() {
                         ))}
                       </div>
                     </li>
-                  </AnimatedWrapper>
                 ))}
               </ul>
             </div>
@@ -571,12 +575,7 @@ export default function Home() {
             <div className="space-y-8">
               <ul className="space-y-8">
                 {experiences.map((experience, index) => (
-                  <AnimatedWrapper
-                    key={index}
-                    delay={(index + 1) * 0.1}
-                    direction="x"
-                  >
-                    <li>
+                  <li key={index}>
                       <div className="mb-2">
                         <div className="flex flex-wrap items-baseline justify-between gap-2">
                           <h3 className="text-md font-medium">
@@ -606,9 +605,11 @@ export default function Home() {
                           {experience.period}
                         </p>
                       </div>
-                      <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-3 leading-relaxed">
-                        {experience.description}
-                      </p>
+                      <ul className="text-sm text-zinc-500 dark:text-zinc-400 mb-3 leading-relaxed list-disc list-inside space-y-1">
+                        {experience.description.map((bullet, i) => (
+                          <li key={i}>{bullet}</li>
+                        ))}
+                      </ul>
                       <div className="flex flex-wrap gap-2">
                         {experience.tech.map((tech) => (
                           <span
@@ -632,7 +633,6 @@ export default function Home() {
                           </div>
                         )}
                     </li>
-                  </AnimatedWrapper>
                 ))}
               </ul>
             </div>
@@ -643,28 +643,22 @@ export default function Home() {
         {activeTab === "skills" && (
           <section className="mb-12">
             <div className="space-y-8">
-              {toolCategories.map((category, index) => (
-                <AnimatedWrapper
-                  key={category.name}
-                  delay={(index + 1) * 0.1}
-                  direction="x"
-                >
-                  <div>
-                    <h3 className="text-md font-medium mb-2">
-                      {category.name}
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                      {category.items.map((tool) => (
-                        <span
-                          key={tool}
-                          className="text-xs px-2.5 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300"
-                        >
-                          {tool}
-                        </span>
-                      ))}
-                    </div>
+              {toolCategories.map((category) => (
+                <div key={category.name}>
+                  <h3 className="text-md font-medium mb-2">
+                    {category.name}
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {category.items.map((tool) => (
+                      <span
+                        key={tool}
+                        className="text-xs px-2.5 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300"
+                      >
+                        {tool}
+                      </span>
+                    ))}
                   </div>
-                </AnimatedWrapper>
+                </div>
               ))}
             </div>
           </section>
@@ -674,70 +668,66 @@ export default function Home() {
         {activeTab === "blog" && (
           <section className="mb-12">
             <div className="space-y-8">
-              <AnimatedWrapper delay={0.1} direction="x">
-                <div>
-                  <h3 className="text-md font-medium mb-2">
-                    Papers from College
-                  </h3>
-                  <div className="space-y-3">
-                    {[{
-                      title: "Code of Ethics",
-                      href: "https://rh-anand.bearblog.dev/code-of-ethics/",
-                    },
-                    {
-                      title: "Hiring Bias at Amazon",
-                      href: "https://rh-anand.bearblog.dev/hiring-bias-at-amazon/",
-                    },
-                    {
-                      title: "More Comprehensive Facial Recognition",
-                      href: "https://rh-anand.bearblog.dev/facial-recognition/",
-                    }].map((paper) => (
-                      <div
-                        key={paper.href}
-                        className="flex items-baseline justify-between"
+              <div>
+                <h3 className="text-md font-medium mb-2">
+                  Papers from College
+                </h3>
+                <div className="space-y-3">
+                  {[{
+                    title: "Code of Ethics",
+                    href: "https://rh-anand.bearblog.dev/code-of-ethics/",
+                  },
+                  {
+                    title: "Hiring Bias at Amazon",
+                    href: "https://rh-anand.bearblog.dev/hiring-bias-at-amazon/",
+                  },
+                  {
+                    title: "More Comprehensive Facial Recognition",
+                    href: "https://rh-anand.bearblog.dev/facial-recognition/",
+                  }].map((paper) => (
+                    <div
+                      key={paper.href}
+                      className="flex items-baseline justify-between"
+                    >
+                      <h4 className="text-sm text-zinc-500 dark:text-zinc-400">
+                        {paper.title}
+                      </h4>
+                      <a
+                        href={paper.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 text-xs text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
                       >
-                        <h4 className="text-sm text-zinc-500 dark:text-zinc-400">
-                          {paper.title}
-                        </h4>
-                        <a
-                          href={paper.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-1 text-xs text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+                        View
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="w-3 h-3"
+                          aria-hidden="true"
                         >
-                          View
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="w-3 h-3"
-                            aria-hidden="true"
-                          >
-                            <path d="M15 3h6v6" />
-                            <path d="M10 14 21 3" />
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                          </svg>
-                        </a>
-                      </div>
-                    ))}
-                  </div>
+                          <path d="M15 3h6v6" />
+                          <path d="M10 14 21 3" />
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                        </svg>
+                      </a>
+                    </div>
+                  ))}
                 </div>
-              </AnimatedWrapper>
+              </div>
             </div>
           </section>
         )}
       </div>
 
       {/* Footer */}
-      <AnimatedWrapper delay={0.8}>
-        <footer className="pt-4 text-xs text-zinc-400 dark:text-zinc-500 flex justify-between items-center"></footer>
-      </AnimatedWrapper>
+      <footer className="pt-4 text-xs text-zinc-400 dark:text-zinc-500 flex justify-between items-center"></footer>
     </main>
   );
 }
